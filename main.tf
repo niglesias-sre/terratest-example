@@ -46,5 +46,5 @@ output "test2_url" {
 }
 
 output "timestamp" {
-  value = "${local.timestamp}"
+  value = local.timestamp
 }
