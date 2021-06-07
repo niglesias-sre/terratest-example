@@ -1,6 +1,8 @@
 # terratest-example
 Example of using Terratest in a GitHub action
 
+![tf-lint status](https://github.com/niglesias-sre/terratest-example/actions/workflows/tf-lint.yml/badge.svg)
+
 ## Running interactively 
 To interact with ASW services, the following environment variables must be set:
   - `AWS_ACCESS_KEY_ID`: AWS Access Key to use
