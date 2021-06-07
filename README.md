@@ -21,7 +21,14 @@ terraform plan
 terraform apply
 ```
 
-## Testing
+## Testing manually
+```
+cd test
+go mod tidy
+go test -v
+```
+
+## Testing with GitHub Actions
 Testing with **terratest** is performed with GitHub actions.
 
-TODO: add tests and documentation
+TODO: add GitHub action for Terratest
