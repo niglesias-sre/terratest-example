@@ -1,11 +1,10 @@
 name: Automated Testing
 on:  [push, pull_request]
 
-environment: Terratest
-
 jobs:
   test:
-    name: checkout
+    environment: Terratest
+    name: checkout and test
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
