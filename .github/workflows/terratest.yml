@@ -1,0 +1,19 @@
+name: Automated Testing
+on:  [push, pull_request]
+
+environment: Terratest
+
+jobs:
+  test:
+    name: checkout
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+        with:
+          fetch-depth: 1
+      - name: Terratest execution
+        uses: fac/terratest-github-action@v1.2.0
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
