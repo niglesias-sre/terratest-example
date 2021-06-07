@@ -32,4 +32,11 @@ go test -v
 ## Testing with GitHub Actions
 Testing with **terratest** is performed with GitHub actions.
 
-TODO: add GitHub action for Terratest
+There are 2 defined actions:
+  - Terraform lint: defined in the `tf-lint.yml` file, checks syntax and style of the Terraform code
+  - Automated Testing: defined in the `terratest.yml` file, provides automated testing with Terratest.
+
+### Automated Testing action
+This action uses a Github environment whith the `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` defined as secrets.
+
+The environment is referred in the `terratest.yml` workflow file.
